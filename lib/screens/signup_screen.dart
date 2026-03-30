@@ -131,10 +131,10 @@ class _SignupScreenState extends State<SignupScreen> {
                     );
 
                     // After user successfully logins in, it will direct the user to the welcome page
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SuccessScreen(),
+                          builder: (context) => SuccessScreen(userName: _nameController.text)
                         ),
 
                       );
